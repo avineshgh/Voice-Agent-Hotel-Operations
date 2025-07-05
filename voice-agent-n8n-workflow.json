@@ -1,0 +1,1166 @@
+{
+  "name": "Pearl Hotel",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo",
+          "mode": "list",
+          "cachedResultName": "Pearl Hotel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $('Trigger Book Room').item.json.body.args.name }}",
+            "Check in date": "={{ $('Trigger Book Room').item.json.body.args.checkInDate }}",
+            "Check out date": "={{ $('Trigger Book Room').item.json.body.args.checkOutDate }}",
+            "No.of Guests": "={{ $('Trigger Book Room').item.json.body.args.numberOfGuests }}",
+            "Room Type": "={{ $('Trigger Book Room').item.json.body.args.roomType }}",
+            "No.of Rooms Required": "={{ $('Trigger Book Room').item.json.body.args.numberOfRooms }}",
+            "Contact Number": "={{ $('Trigger Book Room').item.json.body.args.contactNumber }}",
+            "Email Address": "={{ $('Trigger Book Room').item.json.body.args.emailAddress }}",
+            "ID Proof Type": "={{ $('Trigger Book Room').item.json.body.args.idProofType }}",
+            "ID Proof Number": "={{ $('Trigger Book Room').item.json.body.args.idProofNumber }}",
+            "Special Requests": "={{ $('Trigger Book Room').item.json.body.args.specialRequest }}",
+            "Booking Code": "={{ $json.randomNumber }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check in date",
+              "displayName": "Check in date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check out date",
+              "displayName": "Check out date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "No.of Guests",
+              "displayName": "No.of Guests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Room Type",
+              "displayName": "Room Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "No.of Rooms Required",
+              "displayName": "No.of Rooms Required",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact Number",
+              "displayName": "Contact Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Proof Type",
+              "displayName": "ID Proof Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Proof Number",
+              "displayName": "ID Proof Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Special Requests",
+              "displayName": "Special Requests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Booking Code",
+              "displayName": "Booking Code",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check in Status",
+              "displayName": "Check in Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check out Status",
+              "displayName": "Check out Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -300,
+        -20
+      ],
+      "id": "6e5809b2-dc7b-4b02-a720-fc7bfca13500",
+      "name": "Update Customer Details",
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "a3a0e1a9-7e5b-46e0-8457-7c3dab90a32c",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -760,
+        -20
+      ],
+      "id": "3473d91c-678a-433d-aab1-421e5df8cabb",
+      "name": "Trigger Book Room",
+      "webhookId": "a3a0e1a9-7e5b-46e0-8457-7c3dab90a32c"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      randomNumber: Math.floor(1000 + Math.random() * 9000)\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -540,
+        -20
+      ],
+      "id": "409b7ada-453b-4866-81ad-31258233cd17",
+      "name": "Generating Booking Code"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json['Email Address'] }}",
+        "subject": "\ud83c\udfe8 Your Room Booking at Pearl Hotel is Confirmed!",
+        "message": "=Dear {{ $json.Name }},<br>\n<br>\nGreetings from Pearl Hotel,<br>\n<br>\nWe are pleased to inform you that your booking has been successfully confirmed. Thankyou for choosing to stay with us. Please find the booking details below:<br>\n<br>\n\ud83c\udd94 Booking Code: {{ $json['Booking Code'] }}<br>\n\ud83d\udcc5 CheckIn Date: {{ $json['Check in date'] }}<br>\n\ud83d\udcc5 CheckOut Date: {{ $json['Check out date'] }}<br>\n<br>\nWe look forward to welcoming you and ensuring you have a comfortable and enjoyable stay!<br>\nWarm regards,<br>\nPearl Hotel Team",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -40,
+        -20
+      ],
+      "id": "9c13231e-5f37-42f7-a645-4ebc27f14f95",
+      "name": "Send Booking Mail",
+      "webhookId": "cd373539-e7a6-49de-a8d1-ac61549c5462",
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "c033d2ca-eada-4d5c-8f35-a953fa2a98ad",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -820,
+        1060
+      ],
+      "id": "9cf1e67d-e65a-4089-b187-ea824c3c6951",
+      "name": "Trigger CheckOut Room",
+      "webhookId": "c033d2ca-eada-4d5c-8f35-a953fa2a98ad"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo",
+          "mode": "list",
+          "cachedResultName": "Pearl Hotel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Booking Code",
+              "lookupValue": "={{ $json.body.args.checkOutCode }}"
+            },
+            {
+              "lookupColumn": "Check in Status",
+              "lookupValue": "CheckedIn"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -600,
+        1060
+      ],
+      "id": "29376b1e-ebe0-4060-96a0-702aaadac05f",
+      "name": "Fetching Details",
+      "alwaysOutputData": true,
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo",
+          "mode": "list",
+          "cachedResultName": "Pearl Hotel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Check out Status": "CheckedOut",
+            "row_number": "={{ $json.row_number }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check in date",
+              "displayName": "Check in date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check out date",
+              "displayName": "Check out date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "No.of Guests",
+              "displayName": "No.of Guests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Room Type",
+              "displayName": "Room Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "No.of Rooms Required",
+              "displayName": "No.of Rooms Required",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact Number",
+              "displayName": "Contact Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Proof Type",
+              "displayName": "ID Proof Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Proof Number",
+              "displayName": "ID Proof Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Special Requests",
+              "displayName": "Special Requests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Booking Code",
+              "displayName": "Booking Code",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check in Status",
+              "displayName": "Check in Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Check out Status",
+              "displayName": "Check out Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -160,
+        960
+      ],
+      "id": "b0705825-fa29-4bfe-99c7-8e691d7f28ed",
+      "name": "Updating CheckOut Details",
+      "alwaysOutputData": true,
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Fetching Details').item.json['Email Address'] }}",
+        "subject": "\u2705 Check-Out Confirmed \u2013 Thank You for Staying with Us!",
+        "message": "=Hi {{ $('Fetching Details').item.json.Name }}, <br>\n<br>\nWe\u2019re writing to confirm that your check-out from Pearl Hotel has been successfully completed. \ud83e\uddf3\u2728<br>\nHere are your stay and check-out details:<br>\n\ud83d\udce4 Check-Out Status: Confirmed<br>\n<br>\nThank you for choosing Pearl Hotel. We hope you had a pleasant stay with us.<br>\nWishing you safe travels!<br>\nPearl Hotel Team",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        320,
+        960
+      ],
+      "id": "52c6a09c-3ad4-4ada-b59b-cb7cd3c1dea1",
+      "name": "Send CheckOut Mail",
+      "webhookId": "83297770-2e2d-43b9-b993-366e6b6881c2",
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        540
+      ],
+      "id": "ec523a04-6d27-40bb-a91a-b7543741d587",
+      "name": "When clicking \u2018Test workflow\u2019"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "139s7KuzxAMPqBrcvlaOTUjKbTs6AxpZc7ZnzLlHYRB0",
+          "mode": "list",
+          "cachedResultName": "Pearl Hotel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/139s7KuzxAMPqBrcvlaOTUjKbTs6AxpZc7ZnzLlHYRB0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/139s7KuzxAMPqBrcvlaOTUjKbTs6AxpZc7ZnzLlHYRB0/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1720,
+        540
+      ],
+      "id": "41744e1b-7cd4-42a9-aeba-fe58e1fe8865",
+      "name": "Google Sheets",
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "<REDACTED_URL>",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "<REDACTED_BEARER_TOKEN>"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={\n  \"from_number\": \"+18053603586\",\n  \"to_number\": \"{{ $json.phone_number }}\",\n  \"override_agent_id\": \"agent_2ff56d2d48b874899d59c639f1\",\n  \"retell_llm_dynamic_variables\": {\n    \"name\": \"{{ $json.name }}\",\n    \"email\": \"{{ $json.email }}\",\n    \"phone_number\":\"{{ $json.phone_number }}\" ,\n    \"date\": \"{{ $json.date }}\",\n    \"time\": \"{{ $json.time }}\",\n    \"bookingcode\": \"{{ $json.bookingcode }}\",\n    \"checkin\": \"{{ $json.checkin }}\",\n    \"checkout\": \"{{ $json.checkout }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1940,
+        540
+      ],
+      "id": "87b06b9c-7ac6-4962-9195-97ab688ef05b",
+      "name": "HTTP Request",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "29120ea8-d29e-42c4-932f-f5b08aabfa4a",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -860,
+        440
+      ],
+      "id": "3a489efe-cab3-4d3c-ac01-4ca1a61fba53",
+      "name": "Trigger CheckIn Room",
+      "webhookId": "29120ea8-d29e-42c4-932f-f5b08aabfa4a"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo",
+          "mode": "list",
+          "cachedResultName": "Pearl Hotel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Booking Code",
+              "lookupValue": "={{ $json.body.args.checkInCode }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -640,
+        440
+      ],
+      "id": "d027efab-9501-4c3d-892c-48b3bf15cea6",
+      "name": "Fetch Customer Details",
+      "alwaysOutputData": true,
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "adf9ea96-c44f-4073-b44f-7463f3e5373d",
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "4c384d09-592a-4c58-a97a-be397ea73087",
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -420,
+        440
+      ],
+      "id": "c1da14ec-cdef-450c-a5d9-bdc54c3cd774",
+      "name": "Valid Customer?"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo",
+          "mode": "list",
+          "cachedResultName": "Pearl Hotel",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vdYsElhz9dc4Nf6cFyWGYuC4odslVtT8tadqNTpxrwo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Check in Status": "CheckedIn",
+            "row_number": "={{ $json.row_number }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check in date",
+              "displayName": "Check in date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check out date",
+              "displayName": "Check out date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "No.of Guests",
+              "displayName": "No.of Guests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Room Type",
+              "displayName": "Room Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "No.of Rooms Required",
+              "displayName": "No.of Rooms Required",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact Number",
+              "displayName": "Contact Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Proof Type",
+              "displayName": "ID Proof Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Proof Number",
+              "displayName": "ID Proof Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Special Requests",
+              "displayName": "Special Requests",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Booking Code",
+              "displayName": "Booking Code",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check in Status",
+              "displayName": "Check in Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check out Status",
+              "displayName": "Check out Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -200,
+        340
+      ],
+      "id": "062ba656-41b8-4cf3-b784-d3ab525af7f4",
+      "name": "Update CheckIn Status",
+      "alwaysOutputData": true,
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Fetch Customer Details').item.json['Email Address'] }}",
+        "subject": "\u2705 Check-In Confirmed \u2013 Welcome to Pearl Hotel!",
+        "message": "=Hi {{ $('Fetch Customer Details').item.json.Name }},<br>\nWe\u2019re excited to let you know that your check-in at Pearl Hotel has been successfully confirmed! <br> \n\n\ud83c\udfe8\u2728 Here are your booking and check-in details:<br>  \n\ud83c\udd94 Booking Code: {{ $('Fetch Customer Details').item.json['Booking Code'] }}<br> \n\ud83d\udcc5 CheckIn Date: {{ $('Fetch Customer Details').item.json['Check in date'] }}<br> \n\ud83d\udcc5 CheckOut Date: {{ $('Fetch Customer Details').item.json['Check out date'] }}<br> \n\ud83d\udece\ufe0f Check-In Status: {{ $json['Check in Status'] }}<br> <br> \nWe look forward to making your stay comfortable and memorable.<br> \nWarm regards,<br> \nPearl Hotel Team",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        280,
+        340
+      ],
+      "id": "ab52a0d5-3b75-4ae5-bea7-c9d69245e270",
+      "name": "Send CheckIn Mail",
+      "webhookId": "012c0628-4f0b-4151-b6cf-fb08968d1d02",
+      "credentials": {
+        "<REDACTED_CREDENTIALS>": true
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        60,
+        340
+      ],
+      "id": "b0d3dc75-a728-4ea7-8a1d-83ef3c1ee10e",
+      "name": "CheckIn Valid"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -200,
+        580
+      ],
+      "id": "27f08070-106e-4d5f-83dd-be9e52dc5234",
+      "name": "CheckIn Invalid"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        80,
+        960
+      ],
+      "id": "a82a12d0-5262-4888-baee-bbefdb1a5841",
+      "name": "CheckOut Valid",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        -140,
+        1220
+      ],
+      "id": "b34bfe24-4a82-4aa7-97e1-eeecd3a37cbe",
+      "name": "CheckOut Invalid"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f7b37825-ce1f-41e8-8ec9-4ce06b7131e2",
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "6e05070f-458b-466b-8efe-562a6c4db848",
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -380,
+        1060
+      ],
+      "id": "1804be82-687e-4921-a712-3a7b72698ddd",
+      "name": "Valid Customer? or CheckedIn?",
+      "alwaysOutputData": false,
+      "executeOnce": true
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Update Customer Details": {
+      "main": [
+        [
+          {
+            "node": "Send Booking Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger Book Room": {
+      "main": [
+        [
+          {
+            "node": "Generating Booking Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generating Booking Code": {
+      "main": [
+        [
+          {
+            "node": "Update Customer Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger CheckOut Room": {
+      "main": [
+        [
+          {
+            "node": "Fetching Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetching Details": {
+      "main": [
+        [
+          {
+            "node": "Valid Customer? or CheckedIn?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Updating CheckOut Details": {
+      "main": [
+        [
+          {
+            "node": "CheckOut Valid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \u2018Test workflow\u2019": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger CheckIn Room": {
+      "main": [
+        [
+          {
+            "node": "Fetch Customer Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Customer Details": {
+      "main": [
+        [
+          {
+            "node": "Valid Customer?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Valid Customer?": {
+      "main": [
+        [
+          {
+            "node": "Update CheckIn Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CheckIn Invalid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update CheckIn Status": {
+      "main": [
+        [
+          {
+            "node": "CheckIn Valid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CheckIn Valid": {
+      "main": [
+        [
+          {
+            "node": "Send CheckIn Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CheckOut Valid": {
+      "main": [
+        [
+          {
+            "node": "Send CheckOut Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Valid Customer? or CheckedIn?": {
+      "main": [
+        [
+          {
+            "node": "Updating CheckOut Details",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CheckOut Invalid",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "40174edd-e51d-4ea7-824d-fbc6dae774ea",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "97bf56a39fc5d81b032c0153219857f2694a13c791dba3bb9ea6c18ad448631c"
+  },
+  "id": "S26D4oiRa6yZHHEB",
+  "tags": []
+}

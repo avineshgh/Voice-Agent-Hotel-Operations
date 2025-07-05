@@ -1,0 +1,91 @@
+{
+  "agent_id": "",
+  "channel": "voice",
+  "last_modification_timestamp": 1750235556526,
+  "agent_name": "Pearl Hotel",
+  "response_engine": {
+    "type": "conversation-flow",
+    "version": 0,
+    "conversation_flow_id": "conversation_flow_f36dbe01c59f"
+  },
+  "language": "en-US",
+  "opt_out_sensitive_data_storage": false,
+  "opt_in_signed_url": false,
+  "end_call_after_silence_ms": 62000,
+  "version": 0,
+  "is_published": false,
+  "version_title": "5",
+  "post_call_analysis_model": "gpt-4o-mini",
+  "voice_id": "11labs-Evie",
+  "max_call_duration_ms": 3600000,
+  "interruption_sensitivity": 0.8,
+  "normalize_for_speech": true,
+  "enable_voicemail_detection": false,
+  "allow_user_dtmf": true,
+  "user_dtmf_options": {},
+  "retellLlmData": null,
+  "conversationFlow": {
+    "conversation_flow_id": "conversation_flow_f36dbe01c59f",
+    "version": 0,
+    "global_prompt": "#ROLE\n\nYou are Evie, you work for pearl hotel. You are a digital receptionist helping new or existing customers with our services.\n\n#TASK\n\nYour Tasks:\n- Help customers to make new bookings.\n- Help customers to check in or check out of our hotel.\n- Teach about our hotel services.\n- Provide recommendations for food and activities.\n- Help with room service requests.\n- Help with housekeeping requests.\n- Transfer call to the receptionist.",
+    "nodes": [],
+    "start_node_id": "start-node-1744784596362",
+    "start_speaker": "agent",
+    "tools": [
+      {
+        "parameter_type": "json",
+        "tool_id": "tool-BOOKING",
+        "timeout_ms": 120000,
+        "name": "roomBooking",
+        "description": "While user booking the room",
+        "type": "custom",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "url": "<BOOKING_WEBHOOK_URL>"
+      },
+      {
+        "parameter_type": "json",
+        "tool_id": "tool-CHECKIN",
+        "timeout_ms": 120000,
+        "name": "checkIn",
+        "description": "While user checkin the room",
+        "type": "custom",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "url": "<CHECKIN_WEBHOOK_URL>"
+      },
+      {
+        "parameter_type": "json",
+        "tool_id": "tool-CHECKOUT",
+        "timeout_ms": 120000,
+        "name": "checkOut",
+        "description": "while user checkout the hotel",
+        "type": "custom",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "url": "<CHECKOUT_WEBHOOK_URL>"
+      }
+    ],
+    "model_choice": {
+      "type": "cascading",
+      "model": "gpt-4o-mini",
+      "high_priority": false
+    },
+    "knowledge_base_ids": [],
+    "begin_tag_display_position": {
+      "x": -641.4425990134142,
+      "y": 43.17456889305571
+    },
+    "is_published": false
+  },
+  "llmURL": null
+}
